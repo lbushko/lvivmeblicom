@@ -17,6 +17,14 @@ public class GroopItems extends BasePage {
 
     By itemlink = By.cssSelector("#products_list > div:nth-child(1) > div > div.fm.og_photo > div > a > img");
 
+    private WebElement upperPriceFilter;
+
+    By upperPriceFilterLocator = By.className("noUi-handle noUi-handle-lower");
+
+    private WebElement lowerPriceFilter;
+
+    By lowerPriceFilterLocator = By.className("noUi-handle noUi-handle-upper");
+
     public GroopItems(WebDriver driver){
         super(driver);
     }
@@ -30,5 +38,9 @@ public class GroopItems extends BasePage {
         item = wait.until(ExpectedConditions.elementToBeClickable(itemlink));
         item.click();
         return new ItemPage(driver);
+    }
+
+    public void setPriceFilter(){
+
     }
 }

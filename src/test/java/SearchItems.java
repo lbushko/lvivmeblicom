@@ -22,6 +22,8 @@ public class SearchItems extends BaseTest {
         Assert.assertTrue(searchResultPage.searchItemCout() > 0);
     }
 
+    //TODO зациклений тест
+
     @Test
     public void chechSearchItemCout(){
         String item = "кресло";
