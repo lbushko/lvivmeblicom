@@ -13,8 +13,8 @@ public class MainPageTest extends BaseTest{
 
     @Test
     public void loginTest() throws Exception{
-        String email = "lybomur.bushko@gmail.com";
-        String password = "a13fg7h11";
+        String email = "xxx@gmail.com";
+        String password = "xxx";
         Main main = new Main(driver);
         main.getMain();
         main.getLogin(email,password);
