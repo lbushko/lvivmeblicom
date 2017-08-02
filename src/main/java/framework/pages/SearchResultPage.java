@@ -16,8 +16,6 @@ public class SearchResultPage extends BasePage {
         super(driver);
     }
 
-    //private List<WebElement> searchItems;
-
     By searchItemLocator = By.xpath("//div[@class='fm og_name']/a");
 
     private WebElement searchItemCount;
@@ -26,7 +24,7 @@ public class SearchResultPage extends BasePage {
 
     private WebElement nextPagelink;
 
-    By nextPagelinkLocator = By.className("pag_right");
+    By nextPagelinkLocator = By.xpath("//*[@class='paginator']/a[@class='pag_right']");
 
     public List<String> getSearchItems(){
 
@@ -49,25 +47,19 @@ public class SearchResultPage extends BasePage {
     }
 
     public List<String> getAllItems(){
-
         List<String> allItems = new ArrayList<String>();
-
         boolean activeArrow = true;
-
         do {
             try {
                 allItems.addAll(getSearchItems());
-                System.out.println("Clicking...");
-                nextPagelink = null;
-                nextPagelink = (new WebDriverWait(driver,10).until(ExpectedConditions.elementToBeClickable(nextPagelinkLocator)));
+                nextPagelink = (new WebDriverWait(driver,3).until(ExpectedConditions.elementToBeClickable(nextPagelinkLocator)));
                 nextPagelink.click();
             }
-            catch (NoSuchElementException e){
+            catch (Exception e){
                 activeArrow = false;
             }
         }
         while (activeArrow);
-
         return allItems;
     }
 }

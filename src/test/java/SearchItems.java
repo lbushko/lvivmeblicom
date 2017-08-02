@@ -22,17 +22,12 @@ public class SearchItems extends BaseTest {
         Assert.assertTrue(searchResultPage.searchItemCout() > 0);
     }
 
-
-
-    @Test //TODO зациклений тест
+    @Test
     public void chechSearchItemCout(){
         String item = "кресло";
-
         Main main = new Main(driver);
         main.getMain();
-
         SearchResultPage searchResultPage = main.search(item);
-
         Assert.assertTrue(searchResultPage.searchItemCout() == searchResultPage.getAllItems().size());
     }
 }

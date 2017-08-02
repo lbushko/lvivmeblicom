@@ -68,7 +68,8 @@ public class OrderPage extends BasePage {
         name.clear();
         name.sendKeys("test");
 
-        phoneNumber = wait.until(ExpectedConditions.presenceOfElementLocated(phoneNumberLocator));
+        phoneNumber = wait.until(ExpectedConditions.elementToBeClickable(phoneNumberLocator));
+        phoneNumber.click();
         phoneNumber.sendKeys("0933850394");
 
         email = wait.until(ExpectedConditions.presenceOfElementLocated(emailLocator));

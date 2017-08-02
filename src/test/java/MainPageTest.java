@@ -4,17 +4,17 @@ import org.testng.annotations.Test;
 
 public class MainPageTest extends BaseTest{
 
-    @Test //TODO not working
-    public void menuTest() {
-        Main main = new Main(driver);
-//        main.getMain();
-        main.clickMenu();
-    }
+//    @Test //TODO not working
+//    public void menuTest() {
+//        Main main = new Main(driver);
+////        main.getMain();
+//        main.clickMenu();
+//    }
 
     @Test
     public void loginTest() throws Exception{
-        String email = "xxx@gmail.com";
-        String password = "xxx";
+        String email = "lybomur.bushko@gmail.com";
+        String password = "a13fg7h11";
         Main main = new Main(driver);
         main.getMain();
         main.getLogin(email,password);

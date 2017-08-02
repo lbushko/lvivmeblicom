@@ -4,6 +4,11 @@
 <suite name="lvivmebli.com - All tests">
     <test name="all">
         <classes>
+            <class name="FilterItems"></class>
+            <class name="MainPageTest"></class>
+            <class name="MakeAnOrder"></class>
+            <class name="SearchItems"></class>
+            <class name="WriteComment"></class>
             <class name="TestCase01"></class>
             <class name="TestCase02"></class>
         </classes>

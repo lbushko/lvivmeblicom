@@ -16,9 +16,9 @@ public class FilterItems extends BaseTest {
         GroopItems groopItems = new GroopItems(driver);
         groopItems.getGroopItemsPage();
         Assert.assertEquals("От дешевых к дорогим", groopItems.sortByPriceAsc());
-        Thread.sleep(1000);
+        Thread.sleep(2000);
         Assert.assertEquals("От дорогих к дешевым", groopItems.sortByPriceDesc());
-        Thread.sleep(1000);
+        Thread.sleep(2000);
         Assert.assertEquals("Популярные", groopItems.sortByPopular());
     }
 }
